@@ -69,6 +69,11 @@ RCT_EXPORT_METHOD(setEnableDebugging: (BOOL) enabled) {
 
 // UIKeyboard handling
 
+RCT_EXPORT_METHOD(dismissKeyboard) {
+    if (debugging) RCTLogInfo(@"KeyboardManager.resignFirstResponder");
+    [[IQKeyboardManager sharedManager] dismissKeyboard];
+}
+
 RCT_EXPORT_METHOD(setEnable: (BOOL) enabled) {
     if (debugging) RCTLogInfo(@"KeyboardManager.setEnable: %d", enabled);
     [[IQKeyboardManager sharedManager] setEnable:enabled];
