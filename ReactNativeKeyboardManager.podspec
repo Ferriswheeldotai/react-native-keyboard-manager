@@ -24,5 +24,4 @@ Pod::Spec.new do |s|
 
 	s.dependency 'React'
 	s.dependency 'React/RCTText'
-	s.dependency 'IQKeyboardManager', iqVersion
 end
