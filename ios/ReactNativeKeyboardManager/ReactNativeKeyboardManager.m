@@ -71,7 +71,7 @@ RCT_EXPORT_METHOD(setEnableDebugging: (BOOL) enabled) {
 
 RCT_EXPORT_METHOD(dismissKeyboard) {
     if (debugging) RCTLogInfo(@"KeyboardManager.resignFirstResponder");
-    [[IQKeyboardManager sharedManager] dismissKeyboard];
+    [[IQKeyboardManager sharedManager] resignFirstResponder];
 }
 
 RCT_EXPORT_METHOD(setEnable: (BOOL) enabled) {
