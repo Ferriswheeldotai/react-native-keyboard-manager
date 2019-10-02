@@ -254,6 +254,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -391,6 +392,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../react-native/Libraries/Text/**",
+					"$(SRCROOT)/../../../ios/Pods/Headers/Public/React",
+					"$(SRCROOT)/../../react-native/React",
+					"$(SRCROOT)/../../../ios/Pods/Headers/Public",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LIBRARY_SEARCH_PATHS = "";
@@ -419,6 +423,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../react-native/Libraries/Text/**",
+					"$(SRCROOT)/../../../ios/Pods/Headers/Public/React",
+					"$(SRCROOT)/../../react-native/React",
+					"$(SRCROOT)/../../../ios/Pods/Headers/Public",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LIBRARY_SEARCH_PATHS = "";
