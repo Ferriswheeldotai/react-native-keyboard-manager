@@ -1,5 +1,5 @@
 // MIT License
-// 
+//
 // Copyright (c) 2017 Douglas Nassif Roma Junior
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -75,8 +75,10 @@ RCT_EXPORT_METHOD(dismissKeyboard) {
 }
 
 RCT_EXPORT_METHOD(setEnable: (BOOL) enabled) {
-    if (debugging) RCTLogInfo(@"KeyboardManager.setEnable: %d", enabled);
-    [[IQKeyboardManager sharedManager] setEnable:enabled];
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        if (debugging) RCTLogInfo(@"KeyboardManager.setEnable: %d", enabled);
+        [[IQKeyboardManager sharedManager] setEnable:enabled];
+    });
 }
 
 RCT_EXPORT_METHOD(setKeyboardDistanceFromTextField: (CGFloat) distance) {
@@ -101,8 +103,10 @@ RCT_EXPORT_METHOD(setPreventShowingBottomBlankSpace: (BOOL) enabled) {
 }
 
 RCT_EXPORT_METHOD(setEnableAutoToolbar: (BOOL) enabled) {
-    if (debugging) RCTLogInfo(@"KeyboardManager.setEnableAutoToolbar: %d", enabled);
-    [[IQKeyboardManager sharedManager] setEnableAutoToolbar:enabled];
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        if (debugging) RCTLogInfo(@"KeyboardManager.setEnableAutoToolbar: %d", enabled);
+        [[IQKeyboardManager sharedManager] setEnableAutoToolbar:enabled];
+    });
 }
 
 RCT_EXPORT_METHOD(setShouldToolbarUsesTextFieldTintColor: (BOOL) enabled) {
@@ -151,8 +155,10 @@ RCT_EXPORT_METHOD(setShouldResignOnTouchOutside: (BOOL) enabled) {
 }
 
 RCT_EXPORT_METHOD(resignFirstResponder) {
-    if (debugging) RCTLogInfo(@"KeyboardManager.resignFirstResponder");
-    [[IQKeyboardManager sharedManager] resignFirstResponder];
+    dispatch_sync(dispatch_get_main_queue(), ^{
+      if (debugging) RCTLogInfo(@"KeyboardManager.resignFirstResponder");
+      [[IQKeyboardManager sharedManager] resignFirstResponder];
+    });
 }
 
 RCT_EXPORT_METHOD(reloadLayoutIfNeeded) {
