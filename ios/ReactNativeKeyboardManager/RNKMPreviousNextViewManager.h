@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "IQPreviousNextView.h"
+#import <IQKeyboardManager/IQPreviousNextView.h>
 
 #import <React/RCTViewManager.h>
 

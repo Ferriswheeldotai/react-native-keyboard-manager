@@ -22,7 +22,7 @@
 
 #import "RCTBaseTextInputView.h"
 #import <Foundation/Foundation.h>
-#import "IQKeyboardManager.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
 
 @interface RCTBaseTextInputView (Hack)
 

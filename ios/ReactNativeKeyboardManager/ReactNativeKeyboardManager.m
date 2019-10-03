@@ -24,7 +24,7 @@
 #import <objc/message.h>
 
 #import "ReactNativeKeyboardManager.h"
-#import "IQKeyboardManager.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
 #import <React/RCTLog.h>
 #import <React/RCTRootView.h>
 
@@ -71,7 +71,7 @@ RCT_EXPORT_METHOD(setEnableDebugging: (BOOL) enabled) {
 
 RCT_EXPORT_METHOD(dismissKeyboard) {
     if (debugging) RCTLogInfo(@"KeyboardManager.resignFirstResponder");
-    [[IQKeyboardManager sharedManager] resignFirstResponder];
+    [[IQKeyboardManager sharedManager] dismissKeyboard];
 }
 
 RCT_EXPORT_METHOD(setEnable: (BOOL) enabled) {
