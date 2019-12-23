@@ -2,7 +2,7 @@
 
 [![Licence MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](https://github.com/douglasjunior/react-native-keyboard-manager/blob/master/LICENSE)
 [![npm version](https://img.shields.io/npm/v/react-native-keyboard-manager.svg)](https://www.npmjs.com/package/react-native-keyboard-manager)
-[![npm downloads](https://img.shields.io/npm/dt/react-native-keyboard-manager.svg)](#install-with-react-native-link)
+[![npm downloads](https://img.shields.io/npm/dt/react-native-keyboard-manager.svg)](#install)
 
 Library to prevent issues of keyboard sliding up and cover inputs on React-Native iOS projects ⚛. Thanks to awesome [IQKeyboardManager](https://github.com/hackiftekhar/IQKeyboardManager) ❤️.
 
@@ -35,8 +35,11 @@ Or
 npm i -S react-native-keyboard-manager
 ```
 
-> If you are using `React Native 0.60.+` go to the folder **your-project/ios** and run `pod install`, and you're done.
-> If not, use one of the following methods to link:
+## Auto linking
+
+If you are using `React Native 0.60.+` go to the folder **your-project/ios** and run `pod install`, and you're done. 
+
+If not, use one of the following methods to link.
 
 ## Link with `react-native link`:
 
@@ -67,7 +70,7 @@ npm i -S react-native-keyboard-manager
 
 ## Link with cocoapods:
 
-1. Add this line to your Podfile (complete [Sample](https://github.com/douglasjunior/react-native-keyboard-manager/blob/master/SamplePod/ios/Podfile#L33)):
+1. Add this line to your Podfile
     ```bash
     pod 'ReactNativeKeyboardManager', :path => '../node_modules/react-native-keyboard-manager'
     ```
@@ -79,13 +82,13 @@ npm i -S react-native-keyboard-manager
 
 ## Use
 
-It does not need any library setup to work, just [install](#install-with-react-native-link) and go.
+It does not need any library setup to work, just [install](#install) and go.
 
 But, if you need some configuration, there are some options available. (with default values)
 
 ```js
-import { Platform } from 'react-native
-import KeyboardManager from 'react-native-keyboard-manager'
+import { Platform } from 'react-native';
+import KeyboardManager from 'react-native-keyboard-manager';
 
 if (Platform.OS === 'ios') {
     KeyboardManager.setEnable(true);
@@ -109,7 +112,11 @@ if (Platform.OS === 'ios') {
 }
 ```
 
-If you want to use Next/Previous buttons, enable it and follow [install step 3](#install-with-react-native-link).
+### Enable Next/Previous buttons
+
+If you want to use Next/Previous buttons, enable it.
+
+> If you linked using `react-native link`, make sure you [linked the resource file](#link-with-react-native-link).
 
 ```js
 if (Platform.OS === 'ios') {
@@ -117,27 +124,27 @@ if (Platform.OS === 'ios') {
 }
 ```
 
-If you want to use Next/Previous buttons inside a `Modal`, you need to wrap the fields in a `PreviousNextView`.
+And if you want to use Next/Previous buttons inside a `Modal`, you need to wrap the fields in a `PreviousNextView`.
 
 ```jsx
 class App extends Component {
   render() {
       return (
-          <View ... >
+          <View {...} >
               // others views
-              <Modal ... >
+              <Modal {...} >
                   // others views
                   <PreviousNextView style={...} >
                       // all TextInput
                   </PreviousNextView>
               </Modal>
           </View>
-      )
+      );
   }
 }
 ```
 
-For more details, see the [Sample Project](https://github.com/douglasjunior/react-native-keyboard-manager/blob/master/Sample/index.ios.js) and the official [IQKeyboardManager documentation](https://github.com/hackiftekhar/IQKeyboardManager/wiki/).
+For more details, see the [Sample Project](https://github.com/douglasjunior/react-native-keyboard-manager/blob/master/Sample/App.js) and the official [IQKeyboardManager documentation](https://github.com/hackiftekhar/IQKeyboardManager/tree/v4.0.13).
 
 ## Contribute
 
