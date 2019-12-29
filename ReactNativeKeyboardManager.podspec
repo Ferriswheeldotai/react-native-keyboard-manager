@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
 	s.preserve_paths = 'README.md', 'package.json', '*.js'
 
 	s.dependency 'React'
-	s.dependency 'React/RCTText'
+	s.dependency 'React-RCTText'
 end
